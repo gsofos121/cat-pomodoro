@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cat Pomodoro Timer</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <div class="app">
+
+        <h1>
+            Cat Pomodoro Timer
+        </h1>
+
+
+        <!-- ===================================== -->
+        <!-- MAIN AREA -->
+        <!-- ===================================== -->
+
+        <div class="main-content">
+
+
+            <!-- ===================================== -->
+            <!-- TIMER CARD -->
+            <!-- ===================================== -->
+
+            <div class="timer-card">
+
+
+                <!-- RANDOM SCUBA CAT -->
+
+                <img
+                    id="randomScubaCat"
+                    class="random-scuba-cat"
+                    src="scuba-scuba-cat.gif"
+                    alt="Scuba cat"
+                >
+
+
+                <div class="timer-top-bar">
+
+                    <div
+                        id="modeBadge"
+                        class="mode-badge"
+                    >
+                        Focus Time
+                    </div>
+
+
+                    <button
+                        id="soundToggle"
+                        class="sound-toggle"
+                        type="button"
+                    >
+                        Sound On
+                    </button>
+
+                </div>
+
+
+                <!-- TIMER -->
+
+                <div
+                    id="timer"
+                    class="timer-display"
+                >
+                    25:00
+                </div>
+
+
+                <!-- ===================================== -->
+                <!-- SETUP -->
+                <!-- ===================================== -->
+
+                <div
+                    id="setupPanel"
+                    class="setup-panel"
+                >
+
+
+                    <!-- FOCUS -->
+
+                    <div class="config-block">
+
+                        <h2>
+                            Focus Time
+                        </h2>
+
+                        <div class="time-inputs">
+
+                            <div>
+
+                                <label for="focusHours">
+                                    Hours
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="focusHours"
+                                    value="0"
+                                    min="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="focusMinutes">
+                                    Minutes
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="focusMinutes"
+                                    value="25"
+                                    min="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="focusSeconds">
+                                    Seconds
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="focusSeconds"
+                                    value="0"
+                                    min="0"
+                                    max="59"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SHORT BREAK -->
+
+                    <div class="config-block">
+
+                        <h2>
+                            Short Break
+                        </h2>
+
+                        <div class="time-inputs">
+
+                            <div>
+
+                                <label for="breakHours">
+                                    Hours
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="breakHours"
+                                    value="0"
+                                    min="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="breakMinutes">
+                                    Minutes
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="breakMinutes"
+                                    value="5"
+                                    min="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="breakSeconds">
+                                    Seconds
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="breakSeconds"
+                                    value="0"
+                                    min="0"
+                                    max="59"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LONG BREAK -->
+
+                    <div class="config-block">
+
+                        <h2>
+                            Long Break
+                        </h2>
+
+                        <div class="time-inputs">
+
+                            <div>
+
+                                <label for="longBreakHours">
+                                    Hours
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="longBreakHours"
+                                    value="0"
+                                    min="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="longBreakMinutes">
+                                    Minutes
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="longBreakMinutes"
+                                    value="15"
+                                    min="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="longBreakSeconds">
+                                    Seconds
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="longBreakSeconds"
+                                    value="0"
+                                    min="0"
+                                    max="59"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SESSION SETTINGS -->
+
+                    <div class="session-settings">
+
+                        <div class="session-setting">
+
+                            <label for="totalSessions">
+                                Sessions
+                            </label>
+
+                            <input
+                                type="number"
+                                id="totalSessions"
+                                value="4"
+                                min="1"
+                                max="50"
+                            >
+
+                        </div>
+
+
+                        <div class="session-setting">
+
+                            <label for="longBreakEvery">
+                                Long break every
+                            </label>
+
+                            <div class="inline-input">
+
+                                <input
+                                    type="number"
+                                    id="longBreakEvery"
+                                    value="4"
+                                    min="1"
+                                    max="50"
+                                >
+
+                                <span>
+                                    sessions
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="setup-actions">
+
+                        <button id="startBtn">
+                            Start Pomodoro
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===================================== -->
+                <!-- ACTIVE -->
+                <!-- ===================================== -->
+
+                <div
+                    id="activeControls"
+                    class="active-controls hidden"
+                >
+
+                    <div class="session-info">
+
+                        <div
+                            id="sessionCounter"
+                            class="session-counter"
+                        >
+                            Session 1 / 4
+                        </div>
+
+
+                        <div
+                            id="sessionStatus"
+                            class="session-status"
+                        >
+                            0 of 4 sessions completed
+                        </div>
+
+
+                        <div
+                            id="pawProgress"
+                            class="paw-progress"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div class="active-buttons">
+
+                        <button id="pauseBtn">
+                            Pause
+                        </button>
+
+                        <button id="resetBtn">
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===================================== -->
+            <!-- CAT SECTION -->
+            <!-- ===================================== -->
+
+            <div class="cat-section">
+
+                <div
+                    id="catPhotoWrap"
+                    class="cat-photo-wrap"
+                >
+
+                    <div class="photo-glow"></div>
+
+
+                    <img
+                        id="catPhoto"
+                        src="study-cat-crying.png"
+                        alt="Study cat"
+                        class="cat-photo"
+                    >
+
+
+                    <span class="spark spark-1">
+                        ✦
+                    </span>
+
+                    <span class="spark spark-2">
+                        ♡
+                    </span>
+
+                    <span class="spark spark-3">
+                        ✧
+                    </span>
+
+                    <span class="spark spark-4">
+                        ✦
+                    </span>
+
+                </div>
+
+
+                <!-- ===================================== -->
+                <!-- SEGMENTED PROGRESS -->
+                <!-- ===================================== -->
+
+                <div class="progress-label">
+
+                    <span id="progressLabel">
+                        Focus Progress
+                    </span>
+
+                    <span id="progressPercent">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="segmentProgress"
+                    class="segment-progress"
+                >
+
+                    <div class="progress-segment"></div>
+                    <div class="progress-segment"></div>
+                    <div class="progress-segment"></div>
+                    <div class="progress-segment"></div>
+                    <div class="progress-segment"></div>
+                    <div class="progress-segment"></div>
+                    <div class="progress-segment"></div>
+                    <div class="progress-segment"></div>
+                    <div class="progress-segment"></div>
+                    <div class="progress-segment"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================== -->
+        <!-- TASKS -->
+        <!-- ===================================== -->
+
+        <section class="tasks-card">
+
+            <div class="tasks-header">
+
+                <div>
+
+                    <h2>
+                        Today's Tasks
+                    </h2>
+
+                    <p>
+                        Keep your focus list simple.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="taskCounter"
+                    class="task-counter"
+                >
+                    0 / 0 completed
+                </div>
+
+            </div>
+
+
+            <div class="task-input-row">
+
+                <input
+                    id="taskInput"
+                    type="text"
+                    placeholder="What do you need to do?"
+                    maxlength="120"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="addTaskBtn"
+                    type="button"
+                >
+                    + Add Task
+                </button>
+
+            </div>
+
+
+            <div
+                id="emptyTasks"
+                class="empty-tasks"
+            >
+
+                <div class="empty-task-title">
+                    No tasks yet.
+                </div>
+
+                <span>
+                    Add something you want to finish today.
+                </span>
+
+            </div>
+
+
+            <div
+                id="taskList"
+                class="task-list"
+            >
+            </div>
+
+
+            <div class="tasks-footer">
+
+                <span id="taskMotivation">
+                    One task at a time ♡
+                </span>
+
+                <button
+                    id="clearCompletedBtn"
+                    type="button"
+                >
+                    Clear completed
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- ===================================== -->
+    <!-- CELEBRATION -->
+    <!-- ===================================== -->
+
+    <div
+        id="celebrationOverlay"
+        class="celebration-overlay hidden"
+    >
+
+        <div
+            id="celebrationCard"
+            class="celebration-card"
+        >
+
+            <img
+                id="celebrationGif"
+                class="celebration-gif"
+                src="cat-cat-dance.gif"
+                alt="Celebration cat"
+            >
+
+
+            <div
+                id="celebrationIcon"
+                class="celebration-icon"
+            >
+                ✨
+            </div>
+
+
+            <h2 id="celebrationTitle">
+                Great job!
+            </h2>
+
+
+            <p id="celebrationMessage">
+                Focus session completed
+            </p>
+
+
+            <div
+                id="celebrationPaw"
+                class="celebration-paw"
+            >
+                🐾
+            </div>
+
+
+            <div
+                id="celebrationProgress"
+                class="celebration-progress"
+            >
+                1 / 4 sessions
+            </div>
+
+        </div>
+
+
+        <span class="confetti confetti-1"></span>
+        <span class="confetti confetti-2"></span>
+        <span class="confetti confetti-3"></span>
+        <span class="confetti confetti-4"></span>
+        <span class="confetti confetti-5"></span>
+        <span class="confetti confetti-6"></span>
+        <span class="confetti confetti-7"></span>
+        <span class="confetti confetti-8"></span>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
